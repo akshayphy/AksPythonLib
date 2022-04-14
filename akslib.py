@@ -33,7 +33,7 @@ def fit_powerlaw(xin,yin,xmin,xmax):
 	a = 10**poly[1]
 	yout = a*xin**alpha
 	return yout,alpha,a 
-#*****************************************************
+#****************************************************
 #
 def fit_exponential(xin,yin,xmin,xmax):
   ind_1 = NP.argmin(NP.abs(xin-xmin))

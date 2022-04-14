@@ -144,6 +144,7 @@ def get_3daxes(figno=1,fsz=(8,6)):
   fig = PP.figure(figno,figsize=fsz)
   ax = fig.add_subplot(111, projection='3d')
   return ax
+#*****************************************************
 #
 def get_2axes2d():
 	fig = PP.figure(figsize=PP.figaspect(0.5))
@@ -151,6 +152,7 @@ def get_2axes2d():
 	ax2 = fig.add_subplot(1, 2, 2)
 	PP.subplots_adjust(wspace=ws)
 	return ax1,ax2
+#*****************************************************
 #    
 def get_2axes3d():
 	fig = PP.figure(figsize=PP.figaspect(0.5))

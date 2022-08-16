@@ -163,7 +163,12 @@ def get_2axes3d():
 	return ax1,ax2
 #*****************************************************
 #
-def mycmap():
+def mycmap(name='mycmap',colors=["white","blue","red"]):
+    clrmp = LinearSegmentedColormap.from_list(name, colors)
+    return clrmp
+#*****************************************************
+#
+def cmap_matlab():
 
 	cm_data = [[0.2081, 0.1663, 0.5292], 
 	[0.2116238095, 0.1897809524, 0.5776761905], 

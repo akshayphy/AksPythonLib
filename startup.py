@@ -3,7 +3,7 @@ import matplotlib.pyplot as PP
 PP.ion()
 # import akslib as aks
 
-PP.rc('figure',figsize=(3.5,2.625),dpi=200)
+PP.rc('figure',figsize=(3.5,2.625),dpi=300)
 PP.rc('savefig',bbox='tight',pad_inches=0.05,dpi=600)
 PP.rc('axes',linewidth=0.7,grid=False)
 PP.rc('lines',linewidth=1.,markersize=3.)

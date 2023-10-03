@@ -36,13 +36,13 @@ def fit_powerlaw(xin,yin,xmin,xmax):
 #****************************************************
 #
 def fit_exponential(xin,yin,xmin,xmax):
-  ind_1 = NP.argmin(NP.abs(xin-xmin))
-  ind_2 = NP.argmin(NP.abs(xin-xmax))
-  poly = NP.polyfit(xin[ind_1:ind_2],NP.log10(yin[ind_1:ind_2]),1)
-  alpha = poly[0]/NP.log10(NP.exp(1.))
-  a = 10**poly[1]
-  yout = a*NP.exp(alpha*xin)
-  return yout,alpha,a
+    ind_1 = NP.argmin(NP.abs(xin-xmin))
+    ind_2 = NP.argmin(NP.abs(xin-xmax))
+    poly = NP.polyfit(xin[ind_1:ind_2],NP.log10(yin[ind_1:ind_2]),1)
+    alpha = poly[0]/NP.log10(NP.exp(1.))
+    a = 10**poly[1]
+    yout = a*NP.exp(alpha*xin)
+    return yout,alpha,a
 #*****************************************************
 #
 def local_slope(xin,yin,xmin,xmax):
@@ -59,17 +59,17 @@ def local_slope(xin,yin,xmin,xmax):
 #*****************************************************
 #
 def rank_order(x):
-  N = NP.size(x)
-  xout = NP.sort(x)
-  cpdf = NP.arange(N,0,-1)/float(N)
-  return xout,cpdf
+    N = NP.size(x)
+    xout = NP.sort(x)
+    cpdf = NP.arange(N,0,-1)/float(N)
+    return xout,cpdf
 #*****************************************************
 #
 def rank_order2(x):
-  N = NP.size(x)
-  xout = NP.sort(x)
-  cpdf = NP.arange(0,N)/float(N)
-  return xout,cpdf
+    N = NP.size(x)
+    xout = NP.sort(x)
+    cpdf = NP.arange(0,N)/float(N)
+    return xout,cpdf
 #*****************************************************
 #
 def get_pdf_logbin(x,nbins=50,range=None):
@@ -141,9 +141,9 @@ def nice_plot(rcfontsize=20,pad=0.5,fmty=False):
 #*****************************************************
 #
 def get_3daxes(figno=1,fsz=(8,6)):
-  fig = PP.figure(figno,figsize=fsz)
-  ax = fig.add_subplot(111, projection='3d')
-  return ax
+    fig = PP.figure(figno,figsize=fsz)
+    ax = fig.add_subplot(111, projection='3d')
+    return ax
 #*****************************************************
 #
 def get_2axes2d():
